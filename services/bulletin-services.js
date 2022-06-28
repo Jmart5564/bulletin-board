@@ -15,3 +15,7 @@ export async function getPosts() {
 
     return response.data;
 }
+
+export async function getUser() {
+    return client.auth.session() && client.auth.session().user;
+}
