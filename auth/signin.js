@@ -38,7 +38,7 @@ function checkAuth(response) {
         display();
     }
     else {
-        location.replace('./auth');
+        location.replace('../');
     }
 }
 

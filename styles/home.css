@@ -1,2 +1,5 @@
 /* CSS for home page (index.html) */
 
+.hidden {
+    display: none;
+}
