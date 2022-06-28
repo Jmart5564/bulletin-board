@@ -1,9 +1,10 @@
 // import services and utilities
-import { getPosts, getUser } from '../services/bulletin-services.js';
+import { getPosts, getUser, signOut } from '../services/bulletin-services.js';
 // import component creators
 import createPostList from './components/PostList.js';
 
 const loginButton = document.getElementById('login-button');
+const createButton = document.getElementById('create-post-button');
 // declare state variables
 let posts = [];
 
@@ -17,13 +18,17 @@ window.addEventListener('load', async() => {
     const user = await getUser();
 
     if (user) {
-        loginButton.addEventListener('click', logout);
+        loginButton.addEventListener('click', signOut);
         loginButton.textContent = 'Logout';
     } else {
         loginButton.addEventListener('click', () => {
             location.replace('./auth');
         });
     }
+
+    createButton.addEventListener('click', () => {
+        location.replace('./create');
+    });
 
 }); 
 // Create each component: 
