@@ -1,5 +1,5 @@
 // import services and utilities
-import { getPosts } from '../services/bulletin-service.js';
+import { getPosts } from '../services/bulletin-services.js';
 // import component creators
 import createPostList from './components/PostList.js';
 // declare state variables
@@ -8,7 +8,7 @@ let posts = [];
 // write handler functions
 async function handlePageLoad() {
     posts = await getPosts();
-
+console.log(posts);
     display();
 }
 // Create each component: 

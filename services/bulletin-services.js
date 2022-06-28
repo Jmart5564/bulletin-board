@@ -10,8 +10,8 @@ export async function getPosts() {
         .select(`
         title,
         description,
-        contact,
-        timestamptz`);
+        contact`
+        );
 
     return response.data;
 }

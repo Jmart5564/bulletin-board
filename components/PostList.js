@@ -5,28 +5,26 @@ export default function createPostList(root) {
         root.innerHTML = '';
 
         for (const post of posts) {
-            const li = PostCard({ post });
-            root.append(li);
+            const div = PostCard({ post });
+            root.append(div);
         }
     };
 }
 
 export function PostCard({ post }) {
-    const li = document.createElement('li');
-    const p1 = document.createElement('p');
+    const div = document.createElement('div');
+    const h3 = document.createElement('h3');
     const p2 = document.createElement('p');
     const p3 = document.createElement('p');
-    const p4 = document.createElement('p'); 
 
-    li.classlist.add('post-card');
+    div.classList.add('post-card');
 
-    p1.textContent = post.title;
+    h3.textContent = post.title;
     p2.textContent = post.description;
     p3.textContent = post.contact;
-    p4.textContent = post.timestamptz;
 
-    li.append(p1, p2, p3, p4);
+    div.append(h3, p2, p3);
 
-    return li;
+    return div;
 
 }
