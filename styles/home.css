@@ -1,1 +1,46 @@
 /* CSS for home page (index.html) */
+
+.hidden {
+    display: none;
+}
+
+#bulletin-board {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    height: 75vh;
+    width: 75vw;
+    border: 10px solid black;
+    min-width: calc(10em + 40px);
+    overflow: scroll;
+}
+
+.post-card {
+    color: #000;
+    background: var(--color-yellow);
+    height: 10em;
+    width: 10em;
+    padding: 1em;
+    box-shadow: 5px 5px 7px rgba(33, 33, 33, 0.7);
+    margin: 10px;
+}
+
+.post-card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.post-card p {
+    font-size: 0.75rem;
+    font-weight: normal;
+    margin: 0;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.post-card .contact {
+    font-size: 0.5rem;
+}
